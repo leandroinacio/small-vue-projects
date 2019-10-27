@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Simple converter to remember vue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+</head>
+<body>
+  <article id="app">
+
+    <!-- Currencies -->
+    <div class="row">
+      <select v-model="fromCurrency">
+        <option v-for="currency in computedCurrencies" :value="currency.id">{{currency.currencyName}}</option>
+      </select>
+      <select v-model="toCurrency">
+          <option v-for="currency in computedCurrencies" :value="currency.id">{{currency.currencyName}}</option>
+        </select>
+    </div>
+
+    <!-- Amount input -->
+    <div class="row">
+      <input v-model="amount" type="number" placeholder="Amount"/>
+    </div>
+
+    <!-- Button -->
+    <div class="row">
+      <button @click="convert" :disabled="disableConversion">{{ loading ? 'Convertig...' : 'Convert'}}</button>
+    </div>
+
+    <!-- Result -->
+    <div class="row">
+      <label>${{converted}}</label>
+    </div>
+  </article>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

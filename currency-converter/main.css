@@ -1,0 +1,52 @@
+:root {
+  font-size: 24px;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 20vh;
+  width: 80vw;
+  margin-top: 1rem;
+}
+
+button {
+  border-radius: 2rem;
+  width: 20rem;
+  height: 5rem;
+  background-color: cornflowerblue;
+  border: 1px black solid;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+input {
+  width: 20rem;
+  height: 4rem;
+  border-radius: 1rem;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 2rem;
+}
+
+select {
+  background-color: aliceblue;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-family: 'Cuprum', sans-serif;
+}
+
+label {
+  font-size: 2rem;
+  font-family: 'Cuprum', sans-serif;
+}
